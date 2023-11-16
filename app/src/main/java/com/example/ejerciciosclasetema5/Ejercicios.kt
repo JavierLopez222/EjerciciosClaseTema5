@@ -40,6 +40,24 @@ package com.example.ejerciciosclasetema5
         var ro = texto8.replace("H"," ")
         return ro
     }
+
+    fun divisionCadena(texto : String): List<String>{
+        var dc = texto.split(",")
+        return dc
+    }
+
+    fun unionCadenas(texto1_10: String, texto2_10: String): String{
+        return texto1_10 + " " +texto2_10
+    }
+
+    fun formatoCadena(texto1_11:String, nombre: String, apellido:String):String{
+        var fc = texto1_11.format(nombre, apellido)
+        return fc
+    }
+
+    fun sub(texto1_12: String): String{
+        return texto1_12.substring(6)
+    }
 fun main(){
     var texto1:String = "Hola, mundo"
     var resultado1 = imprimirLongitud(texto1)
@@ -74,4 +92,23 @@ fun main(){
     var texto8: String = "Hola"
     var resultado8 = reemplazarOcurrencias(texto8)
     println("La cadena original es '$texto8' y la nueva cadena es '$resultado8'")
+
+    var texto9: String = "Hola, mama, me haces la cena?"
+    var resultado9 = divisionCadena(texto9)
+    println("Este es la lista que forman el texto anterior y está delimitado por ',' $resultado9")
+
+    var texto1_10: String = "Hola"
+    var texto2_10: String = "Mundo"
+    var resultado10 = unionCadenas(texto1_10, texto2_10)
+    println(resultado10)
+
+    var nombre: String = "Javier"
+    var apellido: String = "López"
+    var texto1_11: String = "Hola %n %a"
+    var resultado11 = formatoCadena(nombre, apellido, texto1_11)
+    println(resultado11)
+
+    var texto1_12: String = "Hola, eres tonto?"
+    var resultado12 = sub(texto1_12)
+    println(resultado12)
 }
